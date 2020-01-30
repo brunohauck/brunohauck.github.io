@@ -11,16 +11,16 @@ In all the companies where I worked, I always tried to do my best and work with 
 ### Work Expirience
 
 # Hauck Tech and Software
-⇢ System Documentation and Software Engineering.
-⇢ Full stack development using Node js, React Js, PHP, GraphQL and Typescript.
-⇢ Organized Android training
-⇢ Continuous Developed of the project Sharpspring a marketing automation system.
+⇢ System Documentation and Software Engineering.<br />
+⇢ Full stack development using Node js, React Js, PHP, GraphQL and Typescript.<br />
+⇢ Organized Android training<br />
+⇢ Continuous Developed of the project Sharpspring a marketing automation system.<br />
 
 # Full Stack Developer, Bairesdev - Aug/2019 - 10/Nov/2019 - Belo Horizonte, MG
-⇢ System Documentation and Software Engineering.
-⇢ Full stack development using Node js, React Js, PHP, GraphQL and Typescript.
-⇢ Organized Android training
-⇢ Continuous Developed of the project Sharpspring a marketing automation system.
+⇢ System Documentation and Software Engineering.<br />
+⇢ Full stack development using Node js, React Js, PHP, GraphQL and Typescript.<br />
+⇢ Organized Android training<br />
+⇢ Continuous Developed of the project Sharpspring a marketing automation system.<br />
 
 # Software Developer, Prodemge - Dez/2011 - Aug/2019 - Belo Horizonte, MG
 ⇢ System Documentation and Software Engineering.
@@ -75,26 +75,6 @@ App to show gas prices built on Angular 5 IONIC 3 and PHP Laravel
 Freelancer project
 # VIGSION 
 Android App built on Android Java MVVM and String framework as backend
-
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/brunohauck/brunohauck.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
 
