@@ -1,0 +1,242 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap" rel="stylesheet" crossorigin>
+
+	<title>Descadastro | Wine</title>
+	<meta name="title" content="Descadastro | Wine" />
+	<meta name="description" content="" />
+	<meta name="robots" content="index, follow">
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Facebook cards:-->
+
+	<!--:Facebook cards-->
+
+
+	<!--:Twitter cards-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+
+
+
+	<script type="text/javascript">
+        var clevertap = {
+            event: [],
+            profile: [],
+            region : 'eu1',
+            account: [],
+            onUserLogin: [],
+            notifications: [],
+            privacy: []
+        };
+        // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+        clevertap.account.push({
+            "id": "TEST-WRZ-ZW9-8K6Z"
+        });
+        clevertap.privacy.push({
+            optOut: false
+        }); //set the flag to true, if the user of the device opts out of sharing their data
+        clevertap.privacy.push({
+            useIP: false
+        }); //set the flag to true, if the user agrees to share their IP data
+        (function () {
+            var wzrk = document.createElement('script');
+            wzrk.type = 'text/javascript';
+            wzrk.async = true;
+            wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' :
+                'http://static.clevertap.com') + '/js/a.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wzrk, s);
+        })();
+    </script>
+</head>
+<body>
+
+	<section id="hotsite" class="landing-page">
+
+		<!-- CONTEUDO DA PAGINA -->
+
+		<section id="modulo1">
+			<div class="grupo">
+				<a href="https://www.wine.com.br/" class="logo-wine">
+					<img src="./img/logo-wine.svg">
+				</a>
+
+				<div class="first-act">
+					<p class="tx1">Você pode nos contar o motivo do cancelamento de sua inscrição?</p>
+
+					<p class="tx2">Sua colaboração é importante para oferecermos sempre o melhor e para ter você de volta conosco.</p>
+
+					<div id="form-questions">
+						<div class="form-group">
+							<input type="hidden" id="email"  readonly="readonly">
+<br />
+							<label class="caixa firstlabel">Eu recebo muitos e-mails em geral
+	                            <input type="radio" class="inputResposta" id="answer01" value="Eu recebo muitos e-mails em geral" name="radio_answer">
+	                            <span class="checkmark"></span>
+	                        </label><br />
+	                        <label class="caixa">A frequência de recebimento de mensagens é muito alta
+	                            <input type="radio" class="inputResposta" id="answer02" value="A frequência de recebimento de mensagens é muito alta" name="radio_answer">
+	                            <span class="checkmark"></span>
+	                        </label><br />
+	                        <label class="caixa">Não tenho tempo suficiente para ler os e-mails
+	                            <input type="radio" class="inputResposta" id="answer03" value="Não tenho tempo suficiente para ler os e-mails" name="radio_answer">
+	                            <span class="checkmark"></span>
+	                        </label><br />
+	                        <label class="caixa">O website não permite que eu faça aquilo que eu desejo
+	                            <input type="radio" class="inputResposta" id="answer04" value="O website não permite que eu faça aquilo que eu desejo" name="radio_answer">
+	                            <span class="checkmark"></span>
+	                        </label><br />
+	                        <label class="caixa">Outros...
+	                            <input type="radio" class="inputResposta" id="answer05" value="Outros..." name="radio_answer">
+	                            <span class="checkmark"></span>
+	                        </label>
+						</div>
+          <br />          <br />          <br />          <br />
+						<button id="sendBtn" onclick="unsubscribe()" value="Desinscreva-me">Desinscreva-me</button>
+            <br />          <br />          <br />          <br />
+            <button id="sendBtn" onclick="testeReason()" value="Desinscreva-me">Teste Reason</button>
+            
+                      <br />          <br />          <br />          <br />
+					</div>
+				</div>
+
+				<div class="feedback" style="display: none;">
+					<p class="tx3">O cancelamento de sua inscrição foi realizado com sucesso.</p>
+
+					<img src="./img/check.svg" class="check">
+
+					<img src="./img/tacas.svg" class="tacas">
+				</div>
+			</div>
+		</section>
+
+		<!-- FIM CONTEUDO DA PAGINA -->
+
+	</section>
+
+	
+
+	<script type="text/javascript" src="./build/js/main.js?v=1"></script>
+
+	<script type="text/javascript">
+		var email = '';
+		let answerQuestion = ''
+
+		//conferindo se ja foi feito o descadastro
+		// let isUnsubscribed = localStorage.getItem('unsubscribed');
+		// if (isUnsubscribed === 'true') {
+		// 	$('#modulo1 .first-act').hide();
+		// 	$('#modulo1 .feedback').show();
+		// 	setInterval(() => {
+		// 		localStorage.removeItem('unsubscribed');
+		// 		window.location.reload();
+		// 	}, 3000)
+		// }
+
+        window.onload = function() {
+            $WZRK_WR.getEmail();
+        };
+        function wzrk_email_fetched(emailStr) {
+            email = emailStr;
+            console.log('entrou 01')
+            console.log(email)
+            document.getElementById("email").value = emailStr;
+        }
+        function wzrk_email_subscription(status) {
+
+            var statusLabel = 'subscribed';
+            if (status == 0) {
+                statusLabel = 'unsubscribed';
+            }
+            alert("You've been " + statusLabel);
+        }
+
+
+         /*
+        $('.inputResposta').change(function() {
+			// answerQuestion = $(this.value + ':checked').val();
+			answerQuestion = $(this).val();
+		});*/
+    
+    
+        function testeReason(){
+          
+            console.log(email);
+            console.log(document.querySelector('input[name="radio_answer"]:checked').value)
+            clevertap.onUserLogin.push({
+                "Site": {
+                    "Identity": email,
+                    "teste":  "vamo que vamo"
+                }
+            })
+            clevertap.event.push("Teste", {
+                "resposta2": "vamo que vamo"
+            });
+          
+        }
+
+        function unsubscribe() {
+
+            $WZRK_WR.unSubEmail();
+            console.log(email);
+            console.log(document.querySelector('input[name="radio_answer"]:checked').value)
+            
+			// localStorage.setItem('unsubscribed', 'true');
+
+            setTimeout(onUserLoginDelay, 8000);
+
+
+
+            
+/*
+            clevertap.event.push("Questions", {
+                "resposta": 'teste'
+            });
+            
+           
+          
+            clevertap.event.push("Questions", {
+                "resposta": document.querySelector('input[name="radio_answer"]:checked').value
+            });*/
+           
+          
+        }
+
+        function onUserLoginDelay() {
+
+            clevertap.onUserLogin.push({
+                "Site": {
+                    "Identity": email,
+                    "teste": "vamoquevamo"
+                }
+            })
+            clevertap.event.push("Questions", {
+                "resposta": document.querySelector('input[name="radio_answer"]:checked').value
+            });
+            $('#modulo1 .first-act').hide();
+            $('#modulo1 .feedback').show();
+
+        }
+
+        function resubscribe() {
+            $WZRK_WR.subEmail();
+        }
+
+		// document.querySelector('#sendBtn').addEventListener('click', (e) => {
+		// 	e.preventDefault()
+		// })
+
+  
+           </script>
+        
+        </body>
+        
+        </html>
