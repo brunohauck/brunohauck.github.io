@@ -117,7 +117,7 @@
     
             <script>
                 let answerQuestion = '';
-                
+                let email = ''
                 // on  page load, fetch the email id of the user.
                 window.onload = function() {
                     $WZRK_WR.getEmail();
@@ -125,6 +125,7 @@
         
                 // will be called after the email id of the user has been fetched
                 function wzrk_email_fetched(emailStr) {
+                    email = emailStr;
                     document.getElementById("email").value = emailStr;
                 }
         
@@ -142,21 +143,33 @@
         
                 // call this function to unsubscribe the user
                 function unsubscribe() {
-                    $WZRK_WR.unSubEmail();
+                    //$WZRK_WR.unSubEmail();
 
-                    var email = document.getElementById("email").value;
-                    clevertap.onUserLogin.push({
-                        "Site": {           // String
-                        "Identity": email
+                    //var email = document.getElementById("email").value;
+                    //console.log(email)
+                    console.log(document.querySelector('input[name="radio_answer"]:checked').value)
+                    if(email==='guajajaras@gmail.com'){
+                        console.log(email);
+                        console.log('-------<1>--------')
+                        console.log(document.querySelector('input[name="radio_answer"]:checked').value)
+
+                        clevertap.onUserLogin.push({
+                            "Site": {           // String
+                            "Identity": email
+                            }
+                        });
+                        console.log('-------<2>--------')
+
+                        clevertap.event.push("Questions", {
+                            "resposta": answerQuestion
+                        });
+                        console.log('-------<3>--------')
+
                     }
-                    });
+                    
 
-                    clevertap.event.push("Questions", {
-                        "resposta": answerQuestion
-                    });
-
-                    $('#modulo1 .first-act').hide();
-                    $('#modulo1 .feedback').show();
+                    //$('#modulo1 .first-act').hide();
+                    //$('#modulo1 .feedback').show();
 
                 }
         
