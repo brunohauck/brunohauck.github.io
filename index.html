@@ -73,7 +73,7 @@
 
                             <div id="form-questions">
                                 <div class="form-group">
-                                    <input id="email"  readonly="readonly">
+                                    <input id="email" readonly="readonly">
 
                                     <label class="caixa firstlabel">Eu recebo muitos e-mails em geral
                                         <input type="radio" class="inputResposta" id="answer01" value="Eu recebo muitos e-mails em geral" name="radio_answer">
@@ -117,7 +117,7 @@
     
             <script>
                 let answerQuestion = '';
-                let email = ''
+     
                 // on  page load, fetch the email id of the user.
                 window.onload = function() {
                     $WZRK_WR.getEmail();
@@ -143,14 +143,15 @@
         
                 // call this function to unsubscribe the user
                 function unsubscribe() {
+                    console.log('------------<1>----------')
                     //$WZRK_WR.unSubEmail();
 
-                    //var email = document.getElementById("email").value;
+                    var email = document.getElementById("email").value;
                     //console.log(email)
                     console.log(document.querySelector('input[name="radio_answer"]:checked').value)
-                    if(email==='guajajaras@gmail.com'){
+               
                         console.log(email);
-                        console.log('-------<1>--------')
+                        console.log('-------<2>--------')
                         console.log(document.querySelector('input[name="radio_answer"]:checked').value)
 
                         clevertap.onUserLogin.push({
@@ -165,7 +166,7 @@
                         });
                         console.log('-------<3>--------')
 
-                    }
+                    
                     
 
                     //$('#modulo1 .first-act').hide();
