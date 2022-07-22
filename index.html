@@ -97,7 +97,7 @@
                                 </div>
 
                                 <button id="sendBtn" onclick="unsubscribe()" value="Desinscreva-me">Desinscreva-me</button>
-                                <br />1.8<br /> 
+                                <br />1.9<br /> 
                             </div>
                         </div>
 
@@ -160,15 +160,19 @@
                             "Site": {           // String
                             "Identity": email,
                             "MSG-dndEmail": true,
-                            "MSG-email": false
+                            "MSG-email": false,
+                            "opt-out-resposta": answerQuestion 
                             }
                         });
+
+                        
+                        /*
                         console.log('-------<2>--------')
 
                         clevertap.event.push("Questions", {
                             "resposta": answerQuestion
                         });
-                        console.log('-------<3>--------')
+                        console.log('-------<3>--------')*/
 
                     
                     
