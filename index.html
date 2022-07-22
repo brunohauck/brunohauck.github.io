@@ -38,7 +38,7 @@
 
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-                <script type="text/javascript" src="https://www.wine.com.br/institucional/descadastro-wine/build/js/main.js?v=1"></script>
+                
 
             <title>Unsubscribe from email</title>
         
@@ -155,7 +155,12 @@
                         console.log(email);
                         console.log('-------<2>--------')
                         console.log(document.querySelector('input[name="radio_answer"]:checked').value)
-
+                    $WZRK_WR.unSubEmail();
+                    clevertap.event.push("Questions", {
+                            "resposta": answerQuestion
+                    }); 
+                    console.log('-------<3>--------')   
+                        /*
                         clevertap.onUserLogin.push({
                             "Site": {           // String
                             "Identity": email,
@@ -163,7 +168,7 @@
                             "MSG-email": false,
                             "opt-out-resposta": answerQuestion 
                             }
-                        });
+                        });*/
 
                         
                         /*
@@ -177,8 +182,8 @@
                     
                     
 
-                    $('#modulo1 .first-act').hide();
-                    $('#modulo1 .feedback').show();
+                    //$('#modulo1 .first-act').hide();
+                    //$('#modulo1 .feedback').show();
 
                 }
         
